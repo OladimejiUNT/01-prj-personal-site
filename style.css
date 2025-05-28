@@ -1,1 +1,175 @@
-/* Add you CSS here */
+/*
+  Simple, beginner-friendly CSS for a personal portfolio site
+  Comments explain each part for learning purposes
+*/
+
+/* Use a modern, easy-to-read font */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #222;
+}
+
+/* Sticky navigation bar styles */
+nav {
+  position: sticky;
+  top: 0;
+  background: #222;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  margin: 0 1em;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 0.5em;
+  display: block;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #00bcd4;
+}
+
+/* Section styles */
+section {
+  padding: 3em 1em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Hero section styles */
+#hero {
+  text-align: center;
+  background: linear-gradient(120deg, #00bcd4 0%, #2196f3 100%);
+  color: #fff;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+#hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+#hero p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+.btn {
+  background: #fff;
+  color: #2196f3;
+  padding: 0.75em 2em;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover {
+  background: #2196f3;
+  color: #fff;
+}
+
+/* About section styles */
+#about .about-content {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+#about img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00bcd4;
+}
+#about p {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Skills section styles */
+#skills .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.skill {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  width: 120px;
+  text-align: center;
+  padding: 1em 0.5em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.skill span {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+/* Projects section styles */
+#projects .projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+.project-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  width: 250px;
+  padding: 1em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  text-align: center;
+}
+.project-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+/* Contact section styles */
+#contact {
+  text-align: center;
+}
+#contact a {
+  color: #2196f3;
+  text-decoration: none;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+  #about .about-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #projects .projects-list, #skills .skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    padding: 2em 0.5em;
+  }
+}
